@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	min-height: 100vh;
+	background-color: var(--background);
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+
+.card {
+	max-width: 540px;
+	font-family: 'JetBrains Mono', monospace;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.card__titleContainer {
+	padding: 31px;
+}
+
+.title {
+	color: var(--gray);
+	font-size: clamp(16px, 24px, 24px);
+	text-align: center;
+}

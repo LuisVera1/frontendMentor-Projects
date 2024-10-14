@@ -1,0 +1,16 @@
+:root {
+	/* color */
+	--background: #0e0e14;
+	--dark-gray: #24232c;
+	--gray: #817d92;
+	--light-gray: #e6e5ea;
+	--light-gray-t: #e7e6eb40;
+	--green: #a4ffaf;
+
+	/* values */
+	--padding-desktop: 32px;
+	--padding-mobile: 16px;
+
+	/* delete */
+	/* --background: #f3f3f3; */
+}

@@ -1,0 +1,32 @@
+.content {
+	background-color: var(--dark-gray);
+	margin-top: 24px;
+	padding: var(--padding-desktop);
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.strengthSection {
+	background-color: #18171f;
+	padding: 23px;
+}
+
+.button {
+	width: 100%;
+	background-color: var(--green);
+	padding: 19px;
+	border: 2px solid var(--green);
+	font-family: 'JetBrains Mono', monospace;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1.125rem;
+	transition: background-color 0.5s;
+}
+
+.button:hover {
+	background-color: var(--dark-gray);
+	color: var(--green);
+	transition: background-color 0.5s;
+}

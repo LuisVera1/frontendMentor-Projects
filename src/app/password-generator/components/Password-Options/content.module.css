@@ -7,9 +7,213 @@
 	gap: 32px;
 }
 
+.lengthSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.labelLength {
+	color: var(--light-gray);
+	font-size: 1.125rem;
+}
+
+/*----------------------------------------------- input range */
+/* reset stylñes */
+.inpRange {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+/* Removes default focus */
+.inpRange:focus {
+	outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+.inpRange::-webkit-slider-runnable-track {
+	background-color: var(--green);
+	height: 8px;
+}
+
+/* slider thumb */
+.inpRange::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	margin-top: -10px;
+	background-color: var(--light-gray);
+	border-radius: 50%;
+	height: 28px;
+	width: 28px;
+}
+
+.inpRange:focus::-webkit-slider-thumb {
+	outline: 2px solid var(--green);
+	background-color: var(--background);
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+.inpRange::-moz-range-track {
+	background-color: var(--green);
+	height: 8px;
+}
+
+/* slider thumb */
+.inpRange::-moz-range-thumb {
+	background-color: var(--light-gray);
+	border: none;
+	border-radius: 50%;
+	height: 28px;
+	width: 28px;
+}
+
+.inpRange:focus::-moz-range-thumb {
+	outline: 2px solid var(--green);
+	background-color: var(--background);
+}
+
+/*----------------------------------------------- */
+
+/*----------------------------------------------- checkboxes */
+.checkboxesSection {
+	font-family: arial;
+	display: block;
+	position: relative;
+	padding-left: 33px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.inputBox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.boxIndicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background: #000000;
+	border: 2px solid var(--light-gray);
+}
+
+/* working */
+
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+	background: #000000;
+}
+
+.control input:checked ~ .control_indicator {
+	background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+	background: #2aa1c0;
+}
+.control input:disabled ~ .control_indicator {
+	background: #e6e6e6;
+	opacity: 0.6;
+	pointer-events: none;
+}
+.control_indicator:after {
+	box-sizing: unset;
+	content: '';
+	position: absolute;
+	display: none;
+}
+.control input:checked ~ .control_indicator:after {
+	display: block;
+}
+.control-checkbox .control_indicator:after {
+	left: 5px;
+	top: 2px;
+	width: 3px;
+	height: 8px;
+	border: solid #ffffff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+	border-color: #7b7b7b;
+}
+.control-checkbox .control_indicator::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 4.5rem;
+	height: 4.5rem;
+	margin-left: -1.3rem;
+	margin-top: -1.3rem;
+	background: #2aa1c0;
+	border-radius: 3rem;
+	opacity: 0.6;
+	z-index: 99999;
+	transform: scale(0);
+}
+@keyframes s-ripple {
+	0% {
+		transform: scale(0);
+	}
+	20% {
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+@keyframes s-ripple-dup {
+	0% {
+		transform: scale(0);
+	}
+	30% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+.control-checkbox input + .control_indicator::before {
+	animation: s-ripple 250ms ease-out;
+}
+.control-checkbox input:checked + .control_indicator::before {
+	animation-name: s-ripple-dup;
+}
+
+/*----------------------------------------------- */
+
 .strengthSection {
 	background-color: #18171f;
 	padding: 23px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.strengthLabel {
+	color: var(--gray);
+	font-size: 1.125rem;
+}
+
+.lengthIndicator {
+	color: var(--green);
+	font-size: 2rem;
 }
 
 .button {
@@ -29,4 +233,45 @@
 	background-color: var(--dark-gray);
 	color: var(--green);
 	transition: background-color 0.5s;
+}
+
+/* make component */
+.newComponent {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+}
+
+.indicator {
+	display: flex;
+	gap: 9px;
+}
+
+.strengthScore {
+	color: var(--light-gray);
+	font-size: 1.5rem;
+}
+
+.strength1 {
+	border: 2px solid white;
+	width: 10px;
+	height: 28px;
+}
+
+.strength2 {
+	border: 2px solid white;
+	width: 10px;
+	height: 28px;
+}
+
+.strength3 {
+	border: 2px solid white;
+	width: 10px;
+	height: 28px;
+}
+
+.strength4 {
+	border: 2px solid white;
+	width: 10px;
+	height: 28px;
 }

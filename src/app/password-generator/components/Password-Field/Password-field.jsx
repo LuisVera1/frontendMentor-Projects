@@ -1,7 +1,7 @@
 'use client'
-import Image from 'next/image';
 import styles from './password.module.css'
 import { useEffect, useState } from 'react';
+import Copy from '@/app/password-generator/components/Icons/Copy'
 
 const appstatus = {
   start: 'start',
@@ -10,16 +10,16 @@ const appstatus = {
 }
 
 export default function PasswordField() {
-  const [status, setStatus] = useState(appstatus.generated)
+  const [status, setStatus] = useState(appstatus.start)
 
-  //hide COPIED legend
+  //hide COPIED legend after 1500ms
   useEffect(() => {
     if (status === appstatus.copied) {
       const timer = setTimeout(() => setStatus(appstatus.generated), 1500);
       return () => clearTimeout(timer);
     }
   }, [status]);
-  
+
   const handleCopyPassword = () => {
     if (status == appstatus.generated) {
       //copy password
@@ -37,12 +37,7 @@ export default function PasswordField() {
         {status == appstatus.copied && <p className={styles.copied}>COPIED</p>}
 
         <button className={styles.btnCopy} onClick={handleCopyPassword} aria-label='Copy password'>
-          <Image
-            src="password-generator/icon-copy.svg"
-            width={21}
-            height={24}
-            alt="Copy password"
-          />
+          <Copy />
         </button>
 
       </div>

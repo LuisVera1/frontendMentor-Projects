@@ -1,16 +1,16 @@
 .content {
 	background-color: var(--dark-gray);
-	margin-top: 24px;
-	padding: var(--padding-desktop);
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
+	margin-top: 24px;
+	padding: var(--padding-desktop);
 }
 
 .lengthSection {
+	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 
 .labelLength {
@@ -19,7 +19,7 @@
 }
 
 /*----------------------------------------------- input range */
-/* reset stylñes */
+/* reset styles */
 .inpRange {
 	-webkit-appearance: none;
 	appearance: none;
@@ -43,16 +43,16 @@
 .inpRange::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
-	margin-top: -10px;
 	background-color: var(--light-gray);
 	border-radius: 50%;
 	height: 28px;
+	margin-top: -10px;
 	width: 28px;
 }
 
 .inpRange:focus::-webkit-slider-thumb {
-	outline: 2px solid var(--green);
 	background-color: var(--background);
+	outline: 2px solid var(--green);
 }
 
 /*********** Firefox styles ***********/
@@ -72,8 +72,8 @@
 }
 
 .inpRange:focus::-moz-range-thumb {
-	outline: 2px solid var(--green);
 	background-color: var(--background);
+	outline: 2px solid var(--green);
 }
 
 /*----------------------------------------------- */
@@ -87,26 +87,26 @@
 }
 
 .checkRow {
-	position: relative;
 	padding-left: 33px;
+	position: relative;
 }
 
 /* hide checkbox */
 .inputBox {
+	opacity: 0;
 	position: absolute;
 	z-index: -1;
-	opacity: 0;
 }
 
 /* place custom checkbox */
 .boxIndicator {
-	position: absolute;
-	top: 2px;
-	left: 0;
-	height: 20px;
-	width: 20px;
 	background: var(--background);
 	border: 2px solid var(--light-gray);
+	height: 20px;
+	left: 0;
+	position: absolute;
+	top: 2px;
+	width: 20px;
 }
 
 .boxIndicator:hover {
@@ -120,26 +120,26 @@
 
 /* icon */
 .inputBox:checked ~ .boxIndicator::after {
-	content: '✔';
 	color: var(--background);
+	content: '✔';
+	left: 1px;
 	position: absolute;
 	top: -5px;
-	left: 2px;
 }
 
 /*----------------------------------------------- */
 
 /* checkbox label */
 .checkboxLabel {
-	font-size: 1.125rem;
 	color: var(--light-gray);
+	font-size: 1.125rem;
 }
 
 .strengthSection {
 	background-color: #18171f;
-	padding: 23px;
 	display: flex;
 	justify-content: space-between;
+	padding: 23px;
 }
 
 .strengthLabel {
@@ -153,28 +153,42 @@
 }
 
 .button {
-	width: 100%;
 	background-color: var(--green);
-	padding: 19px;
 	border: 2px solid var(--green);
 	font-family: 'JetBrains Mono', monospace;
 	font-optical-sizing: auto;
-	font-weight: 700;
-	font-style: normal;
 	font-size: 1.125rem;
-	transition: background-color 0.5s;
+	font-style: normal;
+	font-weight: 700;
+	padding: 19px;
+	transition: 0.5s;
+	width: 100%;
 }
 
 .button:hover {
 	background-color: var(--dark-gray);
 	color: var(--green);
-	transition: background-color 0.5s;
+	transition: 0.5s;
+}
+
+/* arrow icon */
+.button svg {
+	margin-left: 26px;
+}
+
+.btn svg path {
+	transition: 0.5s;
+}
+
+.button:hover svg path {
+	fill: var(--green);
+	transition: 0.5s;
 }
 
 /* make component */
 .newComponent {
-	display: flex;
 	align-items: center;
+	display: flex;
 	gap: 11px;
 }
 
@@ -190,24 +204,24 @@
 
 .strength1 {
 	border: 2px solid white;
-	width: 10px;
 	height: 28px;
+	width: 10px;
 }
 
 .strength2 {
 	border: 2px solid white;
-	width: 10px;
 	height: 28px;
+	width: 10px;
 }
 
 .strength3 {
 	border: 2px solid white;
-	width: 10px;
 	height: 28px;
+	width: 10px;
 }
 
 .strength4 {
 	border: 2px solid white;
-	width: 10px;
 	height: 28px;
+	width: 10px;
 }

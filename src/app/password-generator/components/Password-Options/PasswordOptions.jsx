@@ -2,6 +2,9 @@
 
 import { useState } from 'react'
 import styles from './content.module.css'
+import Arrow from '../Icons/Arrow'
+import { countTypes } from '../../helpers/countTypes'
+import { generatePassword } from '../../helpers/generatePassword'
 
 const initialState = {
   length: 10,
@@ -9,6 +12,7 @@ const initialState = {
   lowercase: false,
   numbers: false,
   symbols: false,
+  count: 0,
 }
 
 export default function PasswordOptions() {
@@ -28,8 +32,17 @@ export default function PasswordOptions() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('submitting')
-    console.log(options)
+
+    //count selected
+    const data = countTypes(options)
+
+    if (data.count == 0) {
+      alert('Please choose at least one option')
+      return;
+    }
+
+    //generate password
+    generatePassword();
   }
 
   return (
@@ -109,7 +122,9 @@ export default function PasswordOptions() {
       </div>
       {/* end component */}
 
-      <button className={styles.button} type='submit'>Generate</button>
+      <button className={styles.button} type='submit'>Generate
+        <Arrow />
+      </button>
     </form>
   )
 }

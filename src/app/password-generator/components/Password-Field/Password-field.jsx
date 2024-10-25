@@ -35,11 +35,9 @@ export default function PasswordField() {
 
       <div className={styles.btnCopiedSection}>
         {status == appstatus.copied && <p className={styles.copied}>COPIED</p>}
-
-        <button className={styles.btnCopy} onClick={handleCopyPassword} aria-label='Copy password'>
+        <button className={styles.btnCopy} onClick={handleCopyPassword} aria-label='Copy password' disabled={status == appstatus.start ? true : false}>
           <Copy />
         </button>
-
       </div>
 
     </div>

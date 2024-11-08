@@ -6,5 +6,5 @@ export const countTypes = (options) => {
 		return acc + 0;
 	}, 0);
 
-	return { ...options, count: totalCount };
+	return { ...options, selected: totalCount };
 };

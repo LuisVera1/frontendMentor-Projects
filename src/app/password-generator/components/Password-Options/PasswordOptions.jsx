@@ -12,7 +12,7 @@ const initialState = {
   lowercase: false,
   numbers: false,
   symbols: false,
-  count: 0,
+  selected: 0,
 }
 
 export default function PasswordOptions() {
@@ -42,7 +42,7 @@ export default function PasswordOptions() {
     }
 
     //generate password
-    generatePassword();
+    generatePassword(data);
   }
 
   return (

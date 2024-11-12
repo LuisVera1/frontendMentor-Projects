@@ -18,25 +18,28 @@ const initialState = {
 export default function PasswordOptions() {
   const [options, setOptions] = useState(initialState);
 
+  // range controller
   const handleRange = (event) => {
     const element = event.target.name;
     const value = event.target.value;
     setOptions({ ...options, [element]: value })
   }
 
+  // check controller
   const handleCheck = (event) => {
     const element = event.target.name;
     const value = !options[element]
     setOptions({ ...options, [element]: value })
   }
 
+  // - - - - - submit
   const handleSubmit = (event) => {
     event.preventDefault();
 
     //count selected
     const data = countTypes(options)
 
-    if (data.count == 0) {
+    if (data.selected == 0) {
       alert('Please choose at least one option')
       return;
     }

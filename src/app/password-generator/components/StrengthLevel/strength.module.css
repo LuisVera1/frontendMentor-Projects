@@ -1,0 +1,68 @@
+.strengthSection {
+	background-color: #18171f;
+	display: flex;
+	justify-content: space-between;
+	padding: 23px;
+}
+
+.strengthLabel {
+	color: var(--gray);
+	font-size: 1.125rem;
+}
+
+.newComponent {
+	align-items: center;
+	display: flex;
+	gap: 11px;
+}
+
+.indicator {
+	display: flex;
+	gap: 9px;
+}
+
+.strengthScore {
+	color: var(--light-gray);
+	font-size: 1.5rem;
+}
+
+.strengthScoreHidden {
+	color: transparent;
+	font-size: 1.5rem;
+}
+
+/* levels */
+.lv0 {
+	border: 2px solid white;
+	height: 28px;
+	width: 10px;
+}
+
+.lv1 {
+	background-color: var(--level-red);
+	border: 2px solid var(--level-red);
+	height: 28px;
+	transition: 0.5s;
+	width: 10px;
+}
+
+.lv2 {
+	background-color: var(--level-orange);
+	border: 2px solid var(--level-orange);
+	height: 28px;
+	width: 10px;
+}
+
+.lv3 {
+	background-color: var(--level-yellow);
+	border: 2px solid var(--level-yellow);
+	height: 28px;
+	width: 10px;
+}
+
+.lv4 {
+	background-color: var(--level-green);
+	border: 2px solid var(--level-green);
+	height: 28px;
+	width: 10px;
+}

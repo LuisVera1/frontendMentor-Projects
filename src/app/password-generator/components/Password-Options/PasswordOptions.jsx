@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import styles from './content.module.css'
 import Arrow from '../Icons/Arrow'
-import { countTypes } from '../../helpers/countTypes'
-import { generatePassword } from '../../helpers/generatePassword'
+import { countTypes, generatePassword, appstatus, getStrength } from '../../helpers'
+import StrengthLevel from '../StrengthLevel/StrengthLevel'
 
 const initialState = {
   length: 10,
@@ -15,7 +15,7 @@ const initialState = {
   selected: 0,
 }
 
-export default function PasswordOptions() {
+export default function PasswordOptions({ status, setStatus, setPassword, strength, setStrength }) {
   const [options, setOptions] = useState(initialState);
 
   // range controller
@@ -36,6 +36,9 @@ export default function PasswordOptions() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    //return if status isnt start or generated
+    if (status != appstatus.start && status != appstatus.generated) return;
+
     //count selected
     const data = countTypes(options)
 
@@ -45,7 +48,13 @@ export default function PasswordOptions() {
     }
 
     //generate password
-    generatePassword(data);
+    const password = generatePassword(data);
+    setPassword(password);
+    setStatus(appstatus.generated)
+
+    //get strength
+    const strengthValue = getStrength(data);
+    setStrength(strengthValue);
   }
 
   return (
@@ -106,24 +115,7 @@ export default function PasswordOptions() {
         </div>
       </div>
 
-
-      {/* compoment */}
-
-      <div className={styles.strengthSection}>
-        <p className={styles.strengthLabel}>Strength</p>
-
-        <div className={styles.newComponent}>
-          <p className={styles.strengthScore}>STRONG</p>
-          <div className={styles.indicator}>
-            <div className={styles.strength1}></div>
-            <div className={styles.strength2}></div>
-            <div className={styles.strength3}></div>
-            <div className={styles.strength4}></div>
-          </div>
-        </div>
-
-      </div>
-      {/* end component */}
+      <StrengthLevel strength={strength} />
 
       <button className={styles.button} type='submit'>Generate
         <Arrow />

@@ -9,21 +9,3 @@
 	justify-content: center;
 	/* align-items: center; */
 }
-
-.card {
-	width: 540px;
-	font-family: 'JetBrains Mono', monospace;
-	font-optical-sizing: auto;
-	font-weight: 700;
-	font-style: normal;
-}
-
-.card__titleContainer {
-	padding: 31px;
-}
-
-.title {
-	color: var(--gray);
-	font-size: clamp(16px, 24px, 24px);
-	text-align: center;
-}

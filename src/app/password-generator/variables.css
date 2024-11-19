@@ -11,6 +11,9 @@
 	--padding-desktop: 32px;
 	--padding-mobile: 16px;
 
-	/* delete */
-	/* --background: #f3f3f3; */
+	/* strengthLevel */
+	--level-red: #f64a4a;
+	--level-orange: #fb7c58;
+	--level-yellow: #f8cd65;
+	--level-green: var(--green);
 }

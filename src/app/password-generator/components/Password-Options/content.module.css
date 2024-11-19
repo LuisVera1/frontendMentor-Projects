@@ -135,18 +135,6 @@
 	font-size: 1.125rem;
 }
 
-.strengthSection {
-	background-color: #18171f;
-	display: flex;
-	justify-content: space-between;
-	padding: 23px;
-}
-
-.strengthLabel {
-	color: var(--gray);
-	font-size: 1.125rem;
-}
-
 .lengthIndicator {
 	color: var(--green);
 	font-size: 2rem;
@@ -183,45 +171,4 @@
 .button:hover svg path {
 	fill: var(--green);
 	transition: 0.5s;
-}
-
-/* make component */
-.newComponent {
-	align-items: center;
-	display: flex;
-	gap: 11px;
-}
-
-.indicator {
-	display: flex;
-	gap: 9px;
-}
-
-.strengthScore {
-	color: var(--light-gray);
-	font-size: 1.5rem;
-}
-
-.strength1 {
-	border: 2px solid white;
-	height: 28px;
-	width: 10px;
-}
-
-.strength2 {
-	border: 2px solid white;
-	height: 28px;
-	width: 10px;
-}
-
-.strength3 {
-	border: 2px solid white;
-	height: 28px;
-	width: 10px;
-}
-
-.strength4 {
-	border: 2px solid white;
-	height: 28px;
-	width: 10px;
 }

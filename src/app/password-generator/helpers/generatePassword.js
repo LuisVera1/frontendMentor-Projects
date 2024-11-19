@@ -121,28 +121,28 @@ const addChars = (dis) => {
 
 	//adding uppercase
 	for (let i = 0; i < dis.uppercase; i++) {
-		const char = upper[Math.round(Math.random() * upper.length)];
+		const char = upper[Math.round(Math.random() * (upper.length - 1))];
 		if (char === undefined) console.log('error upp');
 		selecChars += char;
 	}
 
 	//adding lowercase
 	for (let i = 0; i < dis.lowercase; i++) {
-		const char = lower[Math.round(Math.random() * lower.length)];
+		const char = lower[Math.round(Math.random() * (lower.length - 1))];
 		if (char === undefined) console.log('error low');
 		selecChars += char;
 	}
 
 	//adding numbers
 	for (let i = 0; i < dis.numbers; i++) {
-		const char = numbers[Math.round(Math.random() * numbers.length)];
+		const char = numbers[Math.round(Math.random() * (numbers.length - 1))];
 		if (char === undefined) console.log('error num');
 		selecChars += char;
 	}
 
 	//adding symbols
 	for (let i = 0; i < dis.symbols; i++) {
-		const char = symbols[Math.round(Math.random() * symbols.length)];
+		const char = symbols[Math.round(Math.random() * (symbols.length - 1))];
 		if (char === undefined) console.log('error sym');
 		// const char = '@';
 		selecChars += char;
@@ -184,10 +184,6 @@ export const generatePassword = (op) => {
 
 	//blend chars
 	const password = blendChars(allCharacters);
-
-	console.log({ allCharacters });
-	console.log(distribution);
-	console.log('🚀 - password:', password);
 
 	//return
 	return password;

@@ -2,9 +2,9 @@
 	background-color: var(--dark-gray);
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
+	gap: clamp(1rem, -1.9091rem + 14.5455vw, 2rem);
 	margin-top: 24px;
-	padding: var(--padding-desktop);
+	padding: var(--padding);
 }
 
 .lengthSection {
@@ -83,7 +83,7 @@
 .checkboxesSection {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: clamp(1rem, 0.7615rem + 1.0178vw, 1.25rem);
 }
 
 .checkRow {
@@ -127,17 +127,24 @@
 	top: -5px;
 }
 
+@media (max-width: 450px) {
+	.inputBox:checked ~ .boxIndicator::after {
+		top: clamp(-0.1875rem, 0.1761rem + -1.8182vw, -0.3125rem);
+		left: clamp(0.125rem, 0.3068rem + -0.9091vw, 0.0625rem);
+	}
+}
+
 /*----------------------------------------------- */
 
 /* checkbox label */
 .checkboxLabel {
 	color: var(--light-gray);
-	font-size: 1.125rem;
+	font-size: clamp(0.875rem, 0.1477rem + 3.6364vw, 1.125rem);
 }
 
 .lengthIndicator {
 	color: var(--green);
-	font-size: 2rem;
+	font-size: clamp(1.5rem, 0.6364rem + 3.6364vw, 2rem);
 }
 
 .button {

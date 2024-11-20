@@ -1,13 +1,15 @@
 .strengthSection {
+	align-items: center;
 	background-color: #18171f;
 	display: flex;
 	justify-content: space-between;
-	padding: 23px;
+	padding: clamp(0.875rem, -0.7614rem + 8.1818vw, 1.4375rem);
 }
 
 .strengthLabel {
 	color: var(--gray);
-	font-size: 1.125rem;
+	/* font-size: 1.125rem; */
+	font-size: clamp(1rem, -0.875rem + 8vw, 1.125rem);
 }
 
 .newComponent {
@@ -23,12 +25,12 @@
 
 .strengthScore {
 	color: var(--light-gray);
-	font-size: 1.5rem;
+	font-size: clamp(1rem, -0.4545rem + 7.2727vw, 1.5rem);
 }
 
 .strengthScoreHidden {
 	color: transparent;
-	font-size: 1.5rem;
+	font-size: clamp(1rem, -0.4545rem + 7.2727vw, 1.5rem);
 }
 
 /* levels */
@@ -36,13 +38,14 @@
 	border: 2px solid white;
 	height: 28px;
 	width: 10px;
+	transition: 0.7s;
 }
 
 .lv1 {
 	background-color: var(--level-red);
 	border: 2px solid var(--level-red);
 	height: 28px;
-	transition: 0.5s;
+	transition: 0.7s;
 	width: 10px;
 }
 
@@ -50,6 +53,7 @@
 	background-color: var(--level-orange);
 	border: 2px solid var(--level-orange);
 	height: 28px;
+	transition: 0.7s;
 	width: 10px;
 }
 
@@ -57,6 +61,7 @@
 	background-color: var(--level-yellow);
 	border: 2px solid var(--level-yellow);
 	height: 28px;
+	transition: 0.7s;
 	width: 10px;
 }
 
@@ -64,5 +69,6 @@
 	background-color: var(--level-green);
 	border: 2px solid var(--level-green);
 	height: 28px;
+	transition: 0.7s;
 	width: 10px;
 }

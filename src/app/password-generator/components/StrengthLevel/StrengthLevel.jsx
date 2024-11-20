@@ -4,7 +4,7 @@ import styles from './strength.module.css'
 export default function StrengthLevel({ strength }) {
 
   const strengthLabel = {
-    0: 'NONE',
+    0: '',
     1: 'TOO WEAK!',
     2: 'WEAK',
     3: "MEDIUM",

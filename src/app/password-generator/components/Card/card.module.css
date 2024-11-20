@@ -1,5 +1,6 @@
 .card {
 	width: 540px;
+	min-width: 320px;
 	font-family: 'JetBrains Mono', monospace;
 	font-optical-sizing: auto;
 	font-weight: 700;
@@ -7,11 +8,17 @@
 }
 
 .card__titleContainer {
-	padding: 31px;
+	padding: clamp(1rem, -0.5625rem + 6.6667vw, 1.9375rem);
 }
 
 .title {
 	color: var(--gray);
-	font-size: clamp(16px, 24px, 24px);
+	font-size: clamp(1rem, 0.1667rem + 3.5556vw, 1.5rem);
 	text-align: center;
+}
+
+@media (max-width: 600px) {
+	.card {
+		width: 91.46vw;
+	}
 }

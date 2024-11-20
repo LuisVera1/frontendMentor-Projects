@@ -8,8 +8,7 @@
 	--green: #a4ffaf;
 
 	/* values */
-	--padding-desktop: 32px;
-	--padding-mobile: 16px;
+	--padding: clamp(1rem, -0.7273rem + 7.2727vw, 2rem);
 
 	/* strengthLevel */
 	--level-red: #f64a4a;

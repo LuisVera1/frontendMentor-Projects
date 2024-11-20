@@ -1,6 +1,6 @@
 'use client'
 import styles from './password.module.css'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Copy from '@/app/password-generator/components/Icons/Copy'
 import { appstatus } from '../../helpers';
 

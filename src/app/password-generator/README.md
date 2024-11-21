@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Live solution](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/LuisVera1/frontendMentor-Projects/tree/main/src/app/password-generator)
+- Live Site URL: [Live solution](https://frontend-mentor-projects-five.vercel.app/password-generator)
 
 ## My process
 

@@ -114,25 +114,22 @@
 }
 
 .inputBox:checked ~ .boxIndicator {
-	background-color: var(--green);
+	background: var(--green)
+		url('../../../../../public/password-generator/icon-check.svg');
+	background-position: center center;
+	background-repeat: no-repeat;
 	border: 2px solid var(--green);
 }
 
-/* icon */
-.inputBox:checked ~ .boxIndicator::after {
+/* add icon with after */
+/* .inputBox:checked ~ .boxIndicator::after {
 	color: var(--background);
 	content: '✔';
 	left: 1px;
 	position: absolute;
 	top: -5px;
 }
-
-@media (max-width: 450px) {
-	.inputBox:checked ~ .boxIndicator::after {
-		top: clamp(-0.1875rem, 0.1761rem + -1.8182vw, -0.3125rem);
-		left: clamp(0.125rem, 0.3068rem + -0.9091vw, 0.0625rem);
-	}
-}
+} */
 
 /*----------------------------------------------- */
 

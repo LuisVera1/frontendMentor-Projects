@@ -14,8 +14,8 @@ export default function Home() {
 					</Link>
 				</li>
 				<li>
-					<Link className={styles.link} href="#">
-						- My Second Project
+					<Link className={styles.link} href="/rock-paper-scissors">
+						- Rock, Paper, Scissors
 					</Link>
 				</li>
 			</ul>

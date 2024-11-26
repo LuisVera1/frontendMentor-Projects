@@ -1,11 +1,17 @@
+'use client';
 import styles from './score.module.css';
 
-export default function Score() {
+interface InfoScore {
+	player: string;
+	value: number;
+}
+
+export default function Score({ data }: { data: InfoScore }) {
 	return (
 		<>
 			<div className={styles.scoreCard}>
-				<p className={styles.scoreTitle}>Title</p>
-				<p>10</p>
+				<p className={styles.scoreTitle}>{data.player}</p>
+				<p className={styles.scoreValue}>{data.value}</p>
 			</div>
 		</>
 	);

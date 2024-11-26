@@ -1,9 +1,25 @@
 .scoreCard {
 	background-color: lightgray;
 	border-radius: 8px;
-	padding: 15px;
+	/* 10px@375px to 16px@550px */
+	padding: clamp(0.625rem, -0.1786rem + 3.4286vw, 1rem);
+	text-align: center;
+	/* 80px@375px to 114px@700px */
+	width: clamp(5rem, 2.5481rem + 10.4615vw, 7.125rem);
 }
 
 .scoreTitle {
 	color: var(--score-blue);
+	/* 10px@375px to 16px@550px */
+	font-size: clamp(0.625rem, -0.1786rem + 3.4286vw, 1rem);
+}
+
+.scoreValue {
+	color: var(--dark-text);
+	/* 28px@375px to 45px@700px */
+	font-size: clamp(1.75rem, 0.524rem + 5.2308vw, 2.8125rem);
+	line-height: 64px;
+	/* 40px@375px to 64px@550px */
+	line-height: clamp(2.5rem, -0.7143rem + 13.7143vw, 4rem);
+	margin-top: -1.5px;
 }

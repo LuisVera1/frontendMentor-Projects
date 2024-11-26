@@ -7,7 +7,15 @@
 :root {
 	--background-color: radial-gradient(circle at top, #1f3756, #141539);
 
+	/* colors */
 	--score-blue: #2a46c0;
+	--dark-text: #3b4363;
+	--header-outline: hsl(217, 16%, 45%);
+
+
+	/* font weights */
+	--bold: 700;
+	--normal: 600;
 }
 
 /*
@@ -31,20 +39,6 @@ The designs were created to the following widths:
 - Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
 - Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
 - Spock Gradient: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
-
-### Neutral
-
-- Dark Text: hsl(229, 25%, 31%)
-- Header Outline: hsl(217, 16%, 45%)
-
-## Fonts
-
-- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
-- Weights: 600, 700
-
-> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
-
-
 
 
 

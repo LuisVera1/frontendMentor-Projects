@@ -1,25 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=JetBrains+Mono:wght@700&display=swap');
+
 .container {
 	align-items: center;
 	background: var(--background-color);
 	display: flex;
 	flex-direction: column;
+	font-family: 'Barlow Semi Condensed', sans-serif;
 	justify-content: space-between;
 	margin: 0 auto;
 	max-width: 1440px;
 	min-height: 100vh;
-	padding: 30px 0;
+	padding: 2rem 0;
 }
 
-.headerTitle {
-	width: 700px;
-	border: 3px solid gray;
+.headerSection {
+	align-items: center;
+	border: 3px solid var(--header-outline);
 	border-radius: 15px;
-	padding: 16px;
 	display: flex;
 	justify-content: space-between;
+	/* 10px@375px to 16px@550px */
+	padding: clamp(0.625rem, -0.1786rem + 3.4286vw, 1rem);
+	/* 311px@375px to 700px@800px */
+	width: clamp(19.4375rem, -2.0147rem + 91.5294vw, 43.75rem);
+}
+
+.headerLogo {
+	height: auto;
+	/* 83px@375px to 159px@700px */
+	width: clamp(5.1875rem, -0.2933rem + 23.3846vw, 9.9375rem);
 }
 
 .scoreSection {
 	display: flex;
 	gap: 5px;
+}
+
+.footer {
+	width: 100%;
+}
+
+.footerButton {
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	color: #fff;
+	display: block;
+	font-size: 1rem;
+	height: 40px;
+	letter-spacing: 2.5px;
+	margin-left: auto;
+	margin-right: 32px;
+	outline: none;
+	width: 128px;
+}
+
+/* center button on small screens */
+@media (max-width: 601px) {
+	.footerButton {
+		margin: 0 auto;
+	}
+}
+
+.footerButton:hover {
+	background-color: #fff;
+	color: var(--dark-text);
 }

@@ -1,0 +1,90 @@
+.background {
+	align-items: center;
+	background-color: #00000088;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+.modal {
+	background-color: white;
+	border-radius: 8px;
+	padding: 32px;
+	width: 400px;
+}
+
+@media (max-width: 400px) {
+	.modal {
+		border-radius: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.modalContent {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	height: 100%;
+}
+
+@media (max-width: 400px) {
+	.modalContent {
+		justify-content: space-around;
+	}
+}
+
+.modalHeader {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+@media (max-width: 400px) {
+	.modalHeader {
+		justify-content: center;
+	}
+}
+
+.modalTitle {
+	color: var(--dark-text);
+	font-size: 32px;
+}
+
+.modalImage {
+	display: block;
+}
+
+.closeBtn {
+	background: none;
+	background: url('../../../../../public/rock-paper-scissors/icon-close.svg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	height: 30px;
+	width: 30px;
+}
+
+.closeBtn:hover {
+	border: 2px solid var(--dark-text);
+}
+
+.btnFooter {
+	display: none;
+}
+
+@media (max-width: 400px) {
+	.btnHeader {
+		display: none;
+	}
+
+	.btnFooter {
+		display: block;
+	}
+}

@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Score from './components/score/Score';
+import Modal from './components/modal/Modal';
 
 export const metadata: Metadata = {
 	title: 'Rock Paper Scissors Game!',
@@ -34,7 +35,12 @@ export default function RockPaperScissors() {
 
 			<main>board</main>
 
+			<Modal />
+
+
+
 			<footer className={styles.footer}>
+				<button className={styles.footerButton}>MODE</button>
 				<button className={styles.footerButton}>RULES</button>
 			</footer>
 		</div>

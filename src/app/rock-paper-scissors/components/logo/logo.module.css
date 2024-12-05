@@ -1,0 +1,5 @@
+.headerLogo {
+	height: auto;
+	/* 83px@375px to 159px@700px */
+	width: clamp(5.1875rem, -0.2933rem + 23.3846vw, 9.9375rem);
+}

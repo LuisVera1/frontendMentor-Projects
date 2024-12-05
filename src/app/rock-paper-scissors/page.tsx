@@ -2,9 +2,11 @@ import './variables.css';
 import styles from './page.module.css';
 
 import type { Metadata } from 'next';
-import Image from 'next/image';
+
 import Score from './components/score/Score';
 import Modal from './components/modal/Modal';
+import Buttons from './components/buttons/Buttons';
+import Logo from './components/logo/Logo';
 
 export const metadata: Metadata = {
 	title: 'Rock Paper Scissors Game!',
@@ -17,18 +19,10 @@ export default function RockPaperScissors() {
 		<div className={styles.container}>
 			<header>
 				<div className={styles.headerSection}>
-					<Image
-						className={styles.headerLogo}
-						src="./rock-paper-scissors/logo.svg"
-						width={155.48}
-						height={92.68}
-						alt="Rock paper Scissors"
-						priority={true}
-					/>
-
+					<Logo />
 					<div className={styles.scoreSection}>
-						<Score data={{ player: 'user', value: 0 }} />
-						<Score data={{ player: 'computer', value: 0 }} />
+						<Score />
+						<Score />
 					</div>
 				</div>
 			</header>
@@ -37,11 +31,8 @@ export default function RockPaperScissors() {
 
 			<Modal />
 
-
-
 			<footer className={styles.footer}>
-				<button className={styles.footerButton}>MODE</button>
-				<button className={styles.footerButton}>RULES</button>
+				<Buttons />
 			</footer>
 		</div>
 	);

@@ -1,13 +1,25 @@
 'use client';
 import Image from 'next/image';
 import styles from './modal.module.css';
+import { useStore } from '../../store/store';
+
 export default function Modal() {
+	const { modal, basicType, closeModal } = useStore((state) => state);
+
+	const imgPath =
+		basicType == true
+			? './rock-paper-scissors/modal/image-rules.svg'
+			: './rock-paper-scissors/modal/image-rules-bonus.svg';
+
 	const handleCloseModal = () => {
-		console.log('close');
+		closeModal();
 	};
 
 	return (
-		<div className={styles.background}>
+		<div
+			className={`${modal ? styles.background : styles.hideMode}`}
+			// onMouseDown={handleCloseModal}
+		>
 			<div className={styles.modal}>
 				{/* content */}
 				<div className={styles.modalContent}>
@@ -23,7 +35,7 @@ export default function Modal() {
 					{/* image */}
 					<Image
 						className={styles.modalImage}
-						src="./rock-paper-scissors/image-rules.svg"
+						src={imgPath}
 						width={305}
 						height={271}
 						alt="rules"

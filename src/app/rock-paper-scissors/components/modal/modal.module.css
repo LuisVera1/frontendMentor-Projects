@@ -1,3 +1,7 @@
+.hideMode {
+	display: none;
+}
+
 .background {
 	align-items: center;
 	background-color: #00000088;
@@ -62,7 +66,7 @@
 
 .closeBtn {
 	background: none;
-	background: url('../../../../../public/rock-paper-scissors/icon-close.svg');
+	background: url('../../../../../public/rock-paper-scissors/modal/icon-close.svg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	border: 2px solid transparent;

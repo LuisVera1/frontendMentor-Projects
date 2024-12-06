@@ -23,8 +23,8 @@ interface Actions {
 
 // useCounterStore
 export const useStore = create<Store & Actions>((set) => ({
-	basicV: { user: 0, computer: 0 },
-	bonusV: { user: 0, computer: 0 },
+	basicV: { user: 1, computer: 1 },
+	bonusV: { user: 2, computer: 2 },
 	basicType: true,
 	state: 'start',
 	modal: false,

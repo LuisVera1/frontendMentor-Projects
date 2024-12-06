@@ -1,0 +1,76 @@
+.mainBoard {
+	/* border: 1px dashed plum; */
+	background: url('../../../../../public/rock-paper-scissors/board/bg-triangle.svg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	/* height: 430px; */
+	height: auto;
+	justify-content: space-between;
+	/* width: 476px; */
+	/* 312px@375px to 476px@500px */
+	width: clamp(19.5rem, -11.25rem + 131.2vw, 29.75rem);
+}
+
+/* sectionsn */
+.upperSection {
+	display: flex;
+	justify-content: space-between;
+}
+
+.lowerSection {
+	display: flex;
+	justify-content: center;
+}
+
+/* button general styles */
+.itemSection {
+	align-items: center;
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	height: 198px;
+	height: clamp(8.125rem, -4.625rem + 54.4vw, 12.375rem);
+	justify-content: center;
+	/* width: 198px; */
+	/* 130px@375px to 198px@500px */
+	width: clamp(8.125rem, -4.625rem + 54.4vw, 12.375rem);
+}
+
+.iconSection {
+	align-items: center;
+	background-color: var(--background-icon);
+	border-radius: 50%;
+	box-shadow: var(--inset-shadow);
+	display: flex;
+	/* height: 152px; */
+	height: clamp(6.25rem, -3.5rem + 41.6vw, 9.5rem);
+	justify-content: center;
+	/* width: 152px; */
+	/* 100px@375px to 152px@500px */
+	width: clamp(6.25rem, -3.5rem + 41.6vw, 9.5rem);
+}
+
+@media (max-width: 500px) {
+	.icon {
+		height: auto;
+		width: 50%;
+	}
+}
+
+/* individual styles */
+.paper {
+	background: var(--paper-gradient);
+	box-shadow: 0 9px 0 0 var(--paper-shadow);
+}
+
+.scissors {
+	background: var(--scissors-gradient);
+	box-shadow: 0 9px 0 0 var(--scissors-shadow);
+}
+
+.rock {
+	background: var(--rock-gradient);
+	box-shadow: 0 9px 0 0 var(--rock-shadow);
+}

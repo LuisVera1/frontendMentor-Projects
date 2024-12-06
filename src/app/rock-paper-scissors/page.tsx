@@ -7,6 +7,7 @@ import Score from './components/score/Score';
 import Modal from './components/modal/Modal';
 import Buttons from './components/buttons/Buttons';
 import Logo from './components/logo/Logo';
+import MainBoard from './components/MainBoard/MainBoard';
 
 export const metadata: Metadata = {
 	title: 'Rock Paper Scissors Game!',
@@ -22,12 +23,13 @@ export default function RockPaperScissors() {
 					<Logo />
 					<div className={styles.scoreSection}>
 						<Score />
-						<Score />
 					</div>
 				</div>
 			</header>
 
-			<main>board</main>
+			<main>
+				<MainBoard />
+			</main>
 
 			<Modal />
 

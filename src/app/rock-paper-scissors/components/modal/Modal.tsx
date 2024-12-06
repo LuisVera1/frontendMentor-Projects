@@ -6,11 +6,6 @@ import { useStore } from '../../store/store';
 export default function Modal() {
 	const { modal, basicType, closeModal } = useStore((state) => state);
 
-	const imgPath =
-		basicType == true
-			? './rock-paper-scissors/modal/image-rules.svg'
-			: './rock-paper-scissors/modal/image-rules-bonus.svg';
-
 	const handleCloseModal = () => {
 		closeModal();
 	};
@@ -32,14 +27,27 @@ export default function Modal() {
 						></button>
 					</div>
 
-					{/* image */}
-					<Image
-						className={styles.modalImage}
-						src={imgPath}
-						width={305}
-						height={271}
-						alt="rules"
-					/>
+					{/* Rules: basic */}
+					{basicType == true && (
+						<Image
+							className={styles.modalImage}
+							src="./rock-paper-scissors/modal/image-rules.svg"
+							width={305}
+							height={271}
+							alt="rules"
+						/>
+					)}
+
+					{/* Rules: bonus */}
+					{basicType == false && (
+						<Image
+							className={styles.modalImage}
+							src="./rock-paper-scissors/modal/image-rules-bonus.svg"
+							width={336}
+							height={330}
+							alt="rules"
+						/>
+					)}
 
 					{/* close button mobile */}
 					<button

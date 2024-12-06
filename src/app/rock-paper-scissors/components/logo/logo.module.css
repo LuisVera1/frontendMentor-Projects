@@ -1,5 +1,11 @@
-.headerLogo {
+.headerLogoBasic {
 	height: auto;
 	/* 83px@375px to 159px@700px */
 	width: clamp(5.1875rem, -0.2933rem + 23.3846vw, 9.9375rem);
+}
+
+.headerLogoBonus {
+	height: auto;
+	/* 75px@375px to 109px@700px */
+	width: clamp(4.6875rem, 2.2356rem + 10.4615vw, 6.8125rem);
 }

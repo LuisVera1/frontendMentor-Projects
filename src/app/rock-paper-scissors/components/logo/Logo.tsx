@@ -8,13 +8,30 @@ export default function Logo() {
 	const { basicType } = useStore((state) => state);
 
 	return (
-		<Image
-			className={styles.headerLogo}
-			src="./rock-paper-scissors/logo.svg"
-			width={155.48}
-			height={92.68}
-			alt="Rock paper Scissors"
-			priority={true}
-		/>
+		<>
+			{/* logo basic */}
+			{basicType == true && (
+				<Image
+					className={styles.headerLogoBasic}
+					src="./rock-paper-scissors/logo.svg"
+					width={155.48}
+					height={92.68}
+					alt="Rock paper Scissors"
+					priority={true}
+				/>
+			)}
+
+			{/* logo bonus */}
+			{basicType == false && (
+				<Image
+					className={styles.headerLogoBonus}
+					src="./rock-paper-scissors/logo-bonus.svg"
+					width={108.84}
+					height={108.08}
+					alt="Rock paper Scissors"
+					priority={true}
+				/>
+			)}
+		</>
 	);
 }

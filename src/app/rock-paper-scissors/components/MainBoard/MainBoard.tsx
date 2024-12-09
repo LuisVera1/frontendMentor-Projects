@@ -1,10 +1,10 @@
 'use client';
-import Image from 'next/image';
 import { useStore } from '../../store/store';
 import styles from './mainboard.module.css';
+import ItemButton from '../ItemButton/ItemButton';
 
 export default function MainBoard() {
-	const { basicType } = useStore((state) => state);
+	const { basicType, state } = useStore((state) => state);
 
 	const handleChoice = (item: string) => {
 		console.log(item);
@@ -19,67 +19,48 @@ export default function MainBoard() {
 
 	//TODO: create components
 	/*
-[-] board basic
+[x] board basic
 [] board bonus
 [] playing window (you pick, the house pick)
 [] result window
   */
+
+	const buttons = {
+		rock: {
+			name: 'rock',
+			handleChoice: handleChoice,
+			src: './rock-paper-scissors/board/icon-rock.svg',
+			width: 96,
+			height: 96,
+		},
+		paper: {
+			name: 'paper',
+			handleChoice: handleChoice,
+			src: './rock-paper-scissors/board/icon-paper.svg',
+			width: 73,
+			height: 86,
+		},
+		scissors: {
+			name: 'scissors',
+			handleChoice: handleChoice,
+			src: './rock-paper-scissors/board/icon-scissors.svg',
+			width: 96,
+			height: 96,
+		},
+	};
 
 	return (
 		<>
 			<div className={styles.mainBoard}>
 				{/* up section */}
 				<div className={styles.upperSection}>
-					{/* paper */}
-					<button
-						className={`${styles.itemSection} ${styles.paper}`}
-						onClick={() => handleChoice('paper')}
-					>
-						<div className={styles.iconSection}>
-							<Image
-								className={styles.icon}
-								src="./rock-paper-scissors/board/icon-paper.svg"
-								width={73}
-								height={86}
-								alt="paper"
-							/>
-						</div>
-					</button>
-
-					{/* scissors */}
-					<button
-						className={`${styles.itemSection} ${styles.scissors}`}
-						onClick={() => handleChoice('scissors')}
-					>
-						<div className={styles.iconSection}>
-							<Image
-								className={styles.icon}
-								src="./rock-paper-scissors/board/icon-scissors.svg"
-								width={96}
-								height={96}
-								alt="scissors"
-							/>
-						</div>
-					</button>
+					<ItemButton data={buttons.paper} />
+					<ItemButton data={buttons.scissors} />
 				</div>
 
 				{/* lower section */}
 				<div className={styles.lowerSection}>
-					{/* rock */}
-					<button
-						className={`${styles.itemSection} ${styles.rock}`}
-						onClick={() => handleChoice('rock')}
-					>
-						<div className={styles.iconSection}>
-							<Image
-								className={styles.icon}
-								src="./rock-paper-scissors/board/icon-scissors.svg"
-								width={96}
-								height={96}
-								alt="rock"
-							/>
-						</div>
-					</button>
+					<ItemButton data={buttons.rock} />
 				</div>
 			</div>
 		</>

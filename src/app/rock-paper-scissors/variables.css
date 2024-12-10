@@ -2,6 +2,7 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	font-weight: var(--normal);
 }
 
 :root {
@@ -16,7 +17,7 @@
 	/* gradients */
 	--paper-gradient: linear-gradient(#5671f5, #4865f4);
 	--scissors-gradient: linear-gradient(#eca922, #ec9e0e);
-	--rock-gradient: linear-gradient( #dd405d, #dc2e4e);
+	--rock-gradient: linear-gradient(#dd405d, #dc2e4e);
 
 	/* shadows */
 	--paper-shadow: #2a45c2;

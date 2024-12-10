@@ -19,9 +19,9 @@ interface Actions {
 	showModal: () => void;
 	closeModal: () => void;
 	shitchType: () => void;
+	setStateGame: (newState: string) => void;
 }
 
-// useCounterStore
 export const useStore = create<Store & Actions>((set) => ({
 	basicV: { user: 1, computer: 1 },
 	bonusV: { user: 2, computer: 2 },
@@ -30,8 +30,8 @@ export const useStore = create<Store & Actions>((set) => ({
 	modal: false,
 
 	//actions
-	// increase: () => set((state) => ({ count: state.count + 1 })),
 	showModal: () => set((state) => ({ modal: true })),
 	closeModal: () => set((state) => ({ modal: false })),
 	shitchType: () => set((state) => ({ basicType: !state.basicType })),
+	setStateGame: (newState: string) => set((state) => ({ state: newState })),
 }));

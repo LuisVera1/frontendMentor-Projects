@@ -4,9 +4,9 @@ import styles from './page.module.css';
 import type { Metadata } from 'next';
 
 import Score from './components/score/Score';
-import Modal from './components/modal/Modal';
-import Buttons from './components/buttons/Buttons';
-import Logo from './components/logo/Logo';
+import Modal from './components/Modal/Modal';
+import Buttons from './components/FooterButtons/Buttons';
+import Logo from './components/Logo/Logo';
 import MainBoard from './components/MainBoard/MainBoard';
 
 export const metadata: Metadata = {

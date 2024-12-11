@@ -28,30 +28,28 @@
 }
 
 .spaceCircle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	width: 293px;
-	/* 130px@375px to 300px@500px */
-	width: clamp(8.125rem, -23.75rem + 136vw, 18.75rem);
-
-  height: 300px;
+	align-items: center;
 	border: 1px dashed plum;
-  border-radius: 50%;
+	border-radius: 50%;
+	display: flex;
+	/* 130px@375px to 300px@800px */
+	height: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
+	justify-content: center;
+	/* 130px@375px to 300px@800px */
+	width: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
 }
 
 .circle {
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-name: circleAnm;
-
 	background-color: #0000001a;
 	border-radius: 50%;
-	/* 110px@375px to 224px@500px */
-	height: clamp(6.875rem, -14.5rem + 91.2vw, 14rem);
-	/* 110px@375px to 224px@500px */
+	/* 110px@375px to 224px@800px */
+	height: clamp(6.875rem, 0.5882rem + 26.8235vw, 14rem);
 	margin: 0 auto;
-	width: clamp(6.875rem, -14.5rem + 91.2vw, 14rem);
+	/* 110px@375px to 224px@800px */
+	width: clamp(6.875rem, 0.5882rem + 26.8235vw, 14rem);
 }
 
 @keyframes circleAnm {
@@ -65,27 +63,4 @@
 	80% {
 		background-color: #0000001a;
 	}
-}
-
-/* user items */
-
-.userItem {
-	width: 300px;
-	height: 300px;
-	background-color: red;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.iconSection {
-  width: 224px;
-  height: 224px;
-  background-color: var(--background-icon);
-  border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

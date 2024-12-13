@@ -29,7 +29,6 @@
 
 .spaceCircle {
 	align-items: center;
-	border: 1px dashed plum;
 	border-radius: 50%;
 	display: flex;
 	/* 130px@375px to 300px@800px */

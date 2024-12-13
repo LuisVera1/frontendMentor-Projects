@@ -1,67 +1,77 @@
 .shadow {
-	/* width: 300px;
-	height: 310px;
-	border-radius: 50%; */
-	background-color: plum;
-	height: 300px;
-}
-
-/*
-.shadowWinner {
-	box-shadow: 0 0 0 60px #ffffff0d, 0 0 0 130px #ffffff0d, 0 0 0 200px #ffffff0d;
-} */
-
-.item {
+	border-radius: 50%;
 	/* 130px@375px to 300px@800px */
 	height: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
 	/* 130px@375px to 300px@800px */
 	width: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
+}
 
+.shadowWinner {
+	box-shadow: 0 0 0 60px #ffffff0d, 0 0 0 130px #ffffff0d, 0 0 0 200px #ffffff0d;
+}
+
+@media (max-width: 800px) {
+	.shadowWinner {
+		box-shadow: 0 0 0 40px #ffffff0d, 0 0 0 86px #ffffff0d,
+			0 0 0 132px #ffffff0d;
+	}
+}
+
+@media (max-width: 400px) {
+	.shadowWinner {
+		box-shadow: 0 0 0 20px #ffffff0d, 0 0 0 65px #ffffff0d,
+			0 0 0 100px #ffffff0d;
+	}
+}
+
+.item {
+	align-items: center;
 	background-color: #ff4444;
 	border-radius: 50%;
 	display: flex;
+	/* 130px@375px to 300px@800px */
+	height: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
 	justify-content: center;
-	align-items: center;
 	position: relative;
+	/* 130px@375px to 300px@800px */
+	width: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
 	z-index: 1;
 }
 
-.effect {
+.item3dEffect {
 	background-color: darkred;
-	position: relative;
-
-	/* top: -120px; */
-	/* top: -290px; */
-
-	/* 120px@375px to 290px@800px */
-	top: calc(clamp(7.5rem, -1.875rem + 40vw, 18.125rem) * -1);
-
-	z-index: 0;
 	border-radius: 50%;
 	box-shadow: 0 2px 4px 0 #00000080;
-
 	/* 130px@375px to 300px@800px */
 	height: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
+	position: relative;
+	/* -120px@375px to -290px@800px */
+	top: calc(clamp(7.5rem, -1.875rem + 40vw, 18.125rem) * -1);
 	/* 130px@375px to 300px@800px */
 	width: clamp(8.125rem, -1.25rem + 40vw, 18.75rem);
+	z-index: 0;
 }
 
 .iconSection {
-	width: 224px;
-	height: 224px;
-
-	/* 100px@375px to 224px@800px */
-	height: clamp(6.25rem, -0.5882rem + 29.1765vw, 14rem);
-
-	/* 100px@375px to 224px@800px */
-	width: clamp(6.25rem, -0.5882rem + 29.1765vw, 14rem);
-
+	align-items: center;
 	background-color: var(--background-icon);
 	border-radius: 50%;
-
 	box-shadow: inset 0 11px 0 0 #babfd4;
-
 	display: flex;
+	/* 100px@375px to 224px@800px */
+	height: clamp(6.25rem, -0.5882rem + 29.1765vw, 14rem);
 	justify-content: center;
-	align-items: center;
+	/* 100px@375px to 224px@800px */
+	width: clamp(6.25rem, -0.5882rem + 29.1765vw, 14rem);
+}
+
+/* .icon {
+	width: 35px;
+} */
+
+@media (max-width: 800px) {
+	.icon {
+		width: 55%;
+		height: auto;
+	}
 }

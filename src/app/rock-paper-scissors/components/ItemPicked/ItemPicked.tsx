@@ -22,15 +22,24 @@ const items = {
 	},
 };
 
+interface item {
+	name: string;
+	winner?: boolean;
+}
+
 export default function ItemPicked() {
 	const picked = 'paper';
+	const winner = true;
 
 	return (
 		<>
-			<div className={styles.shadow}>
+			<div
+				className={`${styles.shadow} ${winner == true ? styles.shadowWinner : ''}`}
+			>
 				<div className={styles.item}>
 					<div className={styles.iconSection}>
 						<Image
+							className={styles.icon}
 							src={items[picked].src}
 							width={items[picked].width * 1.7}
 							height={items[picked].height * 1.7}
@@ -38,7 +47,7 @@ export default function ItemPicked() {
 						/>
 					</div>
 				</div>
-				<div className={styles.effect}></div>
+				<div className={styles.item3dEffect}></div>
 			</div>
 		</>
 	);

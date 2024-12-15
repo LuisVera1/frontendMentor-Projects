@@ -26,7 +26,6 @@
 
 .item {
 	align-items: center;
-	background-color: #ff4444;
 	border-radius: 50%;
 	display: flex;
 	/* 130px@375px to 300px@800px */
@@ -39,7 +38,6 @@
 }
 
 .item3dEffect {
-	background-color: darkred;
 	border-radius: 50%;
 	box-shadow: 0 2px 4px 0 #00000080;
 	/* 130px@375px to 300px@800px */
@@ -65,13 +63,56 @@
 	width: clamp(6.25rem, -0.5882rem + 29.1765vw, 14rem);
 }
 
-/* .icon {
-	width: 35px;
-} */
-
 @media (max-width: 800px) {
 	.icon {
 		width: 55%;
 		height: auto;
 	}
+}
+
+/* items colors */
+
+/* rock */
+.rockItem {
+	background: var(--rock-gradient);
+}
+
+.rock3d {
+	background-color: var(--rock-shadow);
+}
+
+/* paper */
+.paperItem {
+	background: var(--paper-gradient);
+}
+
+.paper3d {
+	background-color: var(--paper-shadow);
+}
+
+/* scissors */
+.scissorsItem {
+	background: var(--scissors-gradient);
+}
+
+.scissors3d {
+	background-color: var(--scissors-shadow);
+}
+
+/* lizard */
+.lizardItem {
+	background: var(--lizard-gradient);
+}
+
+.lizard3d {
+	background-color: var(--lizard-shadow);
+}
+
+/* spock */
+.spockItem {
+	background: var(--spock-gradient);
+}
+
+.spock3d {
+	background-color: var(--spock-shadow);
 }

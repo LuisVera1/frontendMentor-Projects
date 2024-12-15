@@ -5,8 +5,8 @@ const items = {
 	rock: {
 		name: 'rock',
 		src: './rock-paper-scissors/board/icon-rock.svg',
-		width: 96,
-		height: 96,
+		width: 76,
+		height: 76,
 	},
 	paper: {
 		name: 'paper',
@@ -17,8 +17,22 @@ const items = {
 	scissors: {
 		name: 'scissors',
 		src: './rock-paper-scissors/board/icon-scissors.svg',
-		width: 96,
-		height: 96,
+		width: 76,
+		height: 76,
+	},
+	lizard: {
+		name: 'lizard',
+		src: './rock-paper-scissors/board/icon-lizard.svg',
+		width: 62,
+		height: 60,
+	},
+	spock: {
+		name: 'spock',
+		src: './rock-paper-scissors/board/icon-spock.svg',
+		// width: 44,
+		// height: 59,
+		width: 61.6,
+		height: 82.6,
 	},
 };
 
@@ -29,14 +43,16 @@ interface item {
 
 export default function ItemPicked() {
 	const picked = 'paper';
-	const winner = true;
+	const winner = false;
 
 	return (
 		<>
 			<div
-				className={`${styles.shadow} ${winner == true ? styles.shadowWinner : ''}`}
+				className={`${styles.shadow} ${
+					winner == true ? styles.shadowWinner : ''
+				}`}
 			>
-				<div className={styles.item}>
+				<div className={`${styles.item} ${styles[picked + 'Item']}`}>
 					<div className={styles.iconSection}>
 						<Image
 							className={styles.icon}
@@ -47,7 +63,9 @@ export default function ItemPicked() {
 						/>
 					</div>
 				</div>
-				<div className={styles.item3dEffect}></div>
+				<div
+					className={`${styles.item3dEffect} ${styles[picked + '3d']}`}
+				></div>
 			</div>
 		</>
 	);

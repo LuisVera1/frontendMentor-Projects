@@ -7,14 +7,6 @@ import PlayingBoard from '../PlayingBoard/PlayingBoad';
 import OptionsBoard from '../OptionsBoard/OptionsBoard';
 import ResultsBoard from '../ResultsBoard/ResultsBoard';
 
-//TODO: create components
-/*
-[x] board basic
-[] board bonus
-[-] playing window (you pick, the house pick)
-[] result window
-  */
-
 export default function MainBoard() {
 	const { state, setStateGame } = useStore((state) => state);
 
@@ -32,10 +24,10 @@ export default function MainBoard() {
 	return (
 		<>
 			{/* start */}
-			{/* <OptionsBoard /> */}
+			<OptionsBoard />
 
 			{/* playing */}
-			<PlayingBoard />
+			{/* <PlayingBoard /> */}
 
 			{/* result */}
 			{/* <ResultsBoard /> */}

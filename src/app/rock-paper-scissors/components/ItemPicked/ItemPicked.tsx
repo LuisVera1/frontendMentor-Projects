@@ -43,7 +43,7 @@ interface item {
 
 export default function ItemPicked() {
 	const picked = 'paper';
-	const winner = false;
+	const winner = true;
 
 	return (
 		<>

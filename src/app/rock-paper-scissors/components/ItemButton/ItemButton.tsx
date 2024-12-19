@@ -15,22 +15,23 @@ export default function ItemButton({ data }: { data: buttonData }) {
 	return (
 		<>
 			<div className={styles.itemShadow}>
-				<div className={`${styles.button3dEffect} ${styles[`${name}Effect`]}`}>
-					<button
-						className={`${styles.btnSection} ${styles[`${name}Btn`]}`}
-						onClick={() => handleChoice(name)}
-					>
-						<div className={styles.iconSection}>
-							<Image
-								className={styles.icon}
-								src={src}
-								width={width}
-								height={height}
-								alt={name}
-							/>
-						</div>
-					</button>
-				</div>
+				<button
+					className={`${styles.btnSection} ${styles[`${name}Btn`]}`}
+					onClick={() => handleChoice(name)}
+				>
+					<div className={styles.iconSection}>
+						<Image
+							className={styles.icon}
+							src={src}
+							width={width}
+							height={height}
+							alt={name}
+						/>
+					</div>
+				</button>
+				<div
+					className={`${styles.item3dEffect} ${styles[`${name}Effect`]}`}
+				></div>
 			</div>
 		</>
 	);

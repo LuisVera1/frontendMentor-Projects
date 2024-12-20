@@ -12,6 +12,7 @@
 	min-height: 100vh;
 	min-width: 320px;
 	padding: 2rem 0;
+	gap: 20px;
 }
 
 .headerSection {

@@ -7,18 +7,15 @@ import styles from './optionsBoard.module.css';
 import ItemButton from '../ItemButton/ItemButton';
 
 export default function OptionsBoard() {
-	const { basicType, setStateGame } = useStore((state) => state);
+	const { basicType, setStateGame, savePickedItems } = useStore(
+		(state) => state
+	);
 
-	//seved items
-	const userItem = useRef('');
-	const computerItem = useRef('');
-
-	const handleChoice = (item: string) => {
+	const handleChoice = (userS: string) => {
 		const computerS = computerSelection(basicType);
 
 		//save items
-		userItem.current = item;
-		computerItem.current = computerS;
+		savePickedItems({ user: userS, computer: computerS });
 
 		//set state playing
 		setStateGame(states.playing);

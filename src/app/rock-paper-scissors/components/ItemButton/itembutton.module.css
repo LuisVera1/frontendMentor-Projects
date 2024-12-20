@@ -4,14 +4,18 @@
 	width: clamp(8.125rem, -4.625rem + 54.4vw, 12.375rem);
 	/* 130px@375px to 198px@500px */
 	height: clamp(8.125rem, -4.625rem + 54.4vw, 12.375rem);
-	transition: 0.8s;
-	/* 145 249 */
+	transition: box-shadow 0.8s;
 }
 
 .itemShadow:hover {
-	box-shadow: 0 0 10px 0 #ffffff0d;
 	box-shadow: 0 0 0 25px #ffffff0d;
 	transition: 0.4s;
+}
+
+@media (max-width: 450px) {
+	.itemShadow:hover {
+		box-shadow: 0 0 0 12.5px #ffffff0d;
+	}
 }
 
 .btnSection {
@@ -24,8 +28,6 @@
 	justify-content: center;
 	position: relative;
 	top: -5px;
-	/* -4px@375px to -9px@500px */
-	/* top: clamp(-0.25rem, 0.6875rem + -4vw, -0.5625rem); */
 	/* 130px@375px to 198px@500px */
 	width: clamp(8.125rem, -4.625rem + 54.4vw, 12.375rem);
 	z-index: 1;
@@ -37,9 +39,8 @@
 	/* 130px@375px to 198px@500px */
 	height: clamp(8.125rem, -4.625rem + 54.4vw, 12.375rem);
 	position: relative;
-	/* 133px@375px to 198px@500px */
-	/* top: calc(clamp(8.3125rem, -3.875rem + 52vw, 12.375rem) * -1); */
-	top: -194px;
+	/* 126px@375px to 194px@500px */
+	top: calc(clamp(7.875rem, -4.875rem + 54.4vw, 12.125rem) * -1);
 	/* 130px@375px to 198px@500px */
 	width: clamp(8.125rem, -4.625rem + 54.4vw, 12.375rem);
 	z-index: 0;

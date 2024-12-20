@@ -7,6 +7,7 @@
 	flex-direction: column;
 	height: auto;
 	justify-content: space-between;
+	min-height: 320px;
 	/* 312px@375px to 476px@500px */
 	width: clamp(19.5rem, -11.25rem + 131.2vw, 29.75rem);
 }
